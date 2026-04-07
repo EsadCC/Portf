@@ -332,6 +332,27 @@ header#welkom {
     margin-bottom: 20px;
 }
 
+.project-photo-box {
+    min-height: 36px;
+    min-width: 72px;
+    padding: 7px 12px;
+    border: 1px dashed #98b8d0;
+    border-radius: 9px;
+    background-color: #f8fbff;
+    color: #215a96;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.project-photo-box:hover {
+    background-color: #eaf3fb;
+    border-color: #3b82f6;
+}
+
 .card-link {
     font-size: 13px;
     font-weight: 500;
@@ -341,6 +362,13 @@ header#welkom {
     align-items: center;
     gap: 6px;
     transition: gap 0.2s;
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .card-link:hover {
@@ -607,6 +635,45 @@ a.contact-value:hover {
     color: #215a96;
 }
 
+.project-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: rgba(20, 35, 58, 0.72);
+    z-index: 200;
+}
+
+.project-modal.is-open {
+    display: flex;
+}
+
+.project-modal-content {
+    width: min(920px, 100%);
+    background-color: #ffffff;
+    border: 1px solid #dde5f0;
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.close-project-modal {
+    border: 1px solid #dde5f0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+#project-modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
 /* FOOTER */
 footer {
     border-top: 1px solid #dde5f0;
@@ -667,5 +734,9 @@ footer {
 
     .nav-list {
         display: none;
+    }
+
+    .project-actions {
+        gap: 8px;
     }
 }

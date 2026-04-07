@@ -69,19 +69,9 @@
                             <p class="card-desc">
                                 Een moderne webapplicatie voor een fictieve crypto-bank. Focus op gebruiksvriendelijke UI, responsief design en heldere datavisualisatie.
                             </p>
-                            <a class="card-link" href="#contact">Project bekijken</a>
-                        </section>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <header class="card-top"></header>
-                        <section class="card-body">
-                            <p class="card-tag">Responsief ontwerp · HTML & CSS</p>
-                            <h3 class="card-title">Portfolio Website</h3>
-                            <p class="card-desc">
-                                Persoonlijke portfolio gebouwd met semantische HTML5 en moderne CSS-technieken zoals Grid en Flexbox. Volledig toegankelijk en mobielvriendelijk.
-                            </p>
-                            <a class="card-link" href="#contact">Project bekijken</a>
+                            <section class="project-actions">
+                                <a class="card-link" href="https://finnovaaa.netlify.app/">Project bekijken</a>
+                            </section>
                         </section>
                     </article>
 
@@ -93,8 +83,10 @@
                             <p class="card-desc">
                                 Een overzichtsdashboard voor het beheren van klanttickets. Met real-time updates en een intuïtieve interface. 
                             </p>
-                            <br>
-                            <a class="card-link" href="#contact">Project bekijken</a>
+                            <section class="project-actions">
+                                <a class="card-link" href="https://github.com/EsadCC/Client-Dashboard">Code bekijken</a>
+                                <button class="project-photo-box open-project-photo" data-src="img/Screenshot 2026-04-07 113106.png" data-alt="Screenshot van Crypto Bank FinNova">Foto bekijken</button>
+                            </section>
                         </section>
                     </article>
 
@@ -113,8 +105,8 @@
                                 FOTO TIP: Vervang onderstaande regels door:
                                 <img src="images/foto-esad.jpg" alt="Foto van Esad Cankurtaran">
                             -->
-                            <span class="about-avatar-placeholder">🧑‍💻</span>
-                            <p>Jouw foto hier</p>
+                            <span class="about-avatar-placeholder"></span>
+                            <p></p>
                         </section>
                     </section>
 
@@ -251,6 +243,13 @@
 
     </main>
 
+    <section class="project-modal" id="project-modal" aria-hidden="true">
+        <section class="project-modal-content" role="dialog" aria-modal="true" aria-label="Projectfoto">
+            <button class="close-project-modal" id="close-project-modal" aria-label="Sluiten">Sluiten</button>
+            <img id="project-modal-image" src="" alt="">
+        </section>
+    </section>
+
     <footer>
         <p>&copy; 2026 Esad Cankurtaran - Gebouwd met HTML & CSS</p>
     </footer>
@@ -267,6 +266,32 @@
         }, { threshold: 0.12 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const projectModal = document.getElementById('project-modal');
+        const projectModalImage = document.getElementById('project-modal-image');
+        const closeProjectModalButton = document.getElementById('close-project-modal');
+        const projectPhotoButtons = document.querySelectorAll('.open-project-photo');
+
+        projectPhotoButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                projectModalImage.src = button.dataset.src;
+                projectModalImage.alt = button.dataset.alt;
+                projectModal.classList.add('is-open');
+                projectModal.setAttribute('aria-hidden', 'false');
+            });
+        });
+
+        function closeProjectModal() {
+            projectModal.classList.remove('is-open');
+            projectModal.setAttribute('aria-hidden', 'true');
+            projectModalImage.src = '';
+            projectModalImage.alt = '';
+        }
+
+        closeProjectModalButton.addEventListener('click', closeProjectModal);
+        projectModal.addEventListener('click', (event) => {
+            if (event.target === projectModal) closeProjectModal();
+        });
     </script>
 </body>
 </html>

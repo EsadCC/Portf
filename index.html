@@ -4,33 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f3f7fb">
-
   <title>Esad Cankurtaran - Junior Software Developer | Rotterdam</title>
   <meta name="description" content="Portfolio van Esad Cankurtaran, junior software developer uit Rotterdam. Gespecialiseerd in HTML, CSS, JavaScript, PHP en MySQL. Beschikbaar voor stageopdrachten.">
-  <meta name="keywords" content="junior developer, software developer Rotterdam, HTML CSS JavaScript PHP MySQL, stagiair developer, webdeveloper Rotterdam">
-  <meta name="author" content="Esad Cankurtaran">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://esadcankurtaran.nl/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://esadcankurtaran.nl/">
-  <meta property="og:title" content="Esad Cankurtaran - Junior Software Developer | Rotterdam">
-  <meta property="og:description" content="Portfolio van Esad Cankurtaran, junior software developer uit Rotterdam. Beschikbaar voor stageopdrachten.">
-  <meta property="og:image" content="https://esadcankurtaran.nl/images/og-image.jpg">
-  <meta property="og:locale" content="nl_NL">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Esad Cankurtaran - Junior Software Developer">
-  <meta name="twitter:description" content="Junior developer uit Rotterdam, beschikbaar voor stageopdrachten.">
-
+  <link rel="canonical" href="https://esadcankurtarann.netlify.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap"></noscript>
-
-  <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=optional">
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
@@ -49,7 +29,7 @@
     </div>
   </nav>
 
-  <!-- HERO / LCP-ELEMENT -->
+  <!-- HERO -->
   <header id="welkom" aria-labelledby="hero-heading">
     <div class="wrap">
       <div class="hero">
@@ -94,7 +74,7 @@
                 Een moderne webapplicatie voor een fictieve crypto-bank. Focus op gebruiksvriendelijke UI, responsief design en heldere datavisualisatie.
               </p>
               <div class="project-actions">
-                <a class="card-link" target="_blank" rel="noopener noreferrer" href="https://finnovaaa.netlify.app/">
+                <a class="card-link" target="_blank"  href="https://finnovaaa.netlify.app/">
                   Project bekijken
                 </a>
               </div>
@@ -110,7 +90,7 @@
                 Een overzichtsdashboard voor het beheren van klanttickets. Met real-time updates en een intuïtieve interface.
               </p>
               <div class="project-actions">
-                <a class="card-link" href="https://github.com/EsadCC/Client-Dashboard" target="_blank" rel="noopener noreferrer">
+                <a class="card-link" href="https://github.com/EsadCC/Client-Dashboard" target="_blank">
                   Code bekijken
                 </a>
                 <button class="project-photo-box open-project-photo"
@@ -134,20 +114,8 @@
 
           <div class="about-image-wrap reveal">
             <div class="about-avatar">
-              <!--
-                FIX #6: LCP-element – fetchpriority="high" + expliciete width/height
-                Zorg dat images/foto-esad.jpg bestaat op je server.
-                Converteer naar WebP voor snellere laadtijd (~30-50% kleiner).
-              -->
               <img
-                src="images/foto-esad.jpg"
-                alt="Esad Cankurtaran, junior software developer uit Rotterdam"
-                width="400"
-                height="400"
-                loading="eager"
-                fetchpriority="high"
-                decoding="sync"
-              >
+                src="img/foto-esad.jpg" alt="Esad Cankurtaran, junior software developer uit Rotterdam">
             </div>
           </div>
 
@@ -188,7 +156,6 @@
         <div class="skills-grid">
 
           <article class="skill-card reveal">
-            <!-- FIX #7: skill-bar als <div> i.p.v. <section> — role=progressbar mag niet op <section> -->
             <div class="skill-icon-wrap" aria-hidden="true">
               <img src="img/html-5.svg" alt="HTML5 logo" width="28" height="28" loading="lazy">
             </div>
@@ -258,7 +225,6 @@
             <div class="contact-row">
               <div class="contact-info">
                 <p class="contact-label">E-mail</p>
-                <!-- FIX #8: Cloudflare email-obfuscation verwijderd – voorkomt 404 op email-decode.js -->
                 <a class="contact-value" href="mailto:esad3074@gmail.com">esad3074@gmail.com</a>
               </div>
               <a class="btn btn-primary" href="mailto:esad3074@gmail.com">E-mail sturen</a>
@@ -277,7 +243,6 @@
                 <p class="contact-label">Locatie</p>
                 <p class="contact-value">Rotterdam, Nederland</p>
               </div>
-              <!-- FIX #9: Identieke link-tekst opgelost – was "Neem contact op" → mailto -->
               <a class="btn btn-ghost" href="mailto:esad3074@gmail.com" aria-label="Stuur een e-mail naar Esad">Stuur e-mail</a>
             </div>
           </div>
@@ -295,7 +260,6 @@
     </div>
   </div>
 
-  <!-- HTML Sitemap in footer -->
   <footer>
     <nav aria-label="Sitemap">
       <ul style="list-style:none;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;font-size:13px;">
@@ -304,14 +268,11 @@
         <li><a href="#over-mij" style="color:#425a78;text-decoration:none;">Over mij</a></li>
         <li><a href="#skills" style="color:#425a78;text-decoration:none;">Skills</a></li>
         <li><a href="#contact" style="color:#425a78;text-decoration:none;">Contact</a></li>
-        <li><a href="/sitemap.xml" style="color:#425a78;text-decoration:none;">Sitemap</a></li>
-        <li><a href="/sitemap.html" style="color:#425a78;text-decoration:none;">HTML Sitemap</a></li>
       </ul>
     </nav>
     <p>&copy; 2026 Esad Cankurtaran – Junior Software Developer Rotterdam</p>
   </footer>
 
-  <!-- FIX #10: Cloudflare email-decode script verwijderd (veroorzaakte 404-console-fout) -->
   <script>
     // Scroll-reveal
     const observer = new IntersectionObserver((entries) => {
@@ -344,11 +305,15 @@
       projectModal.classList.remove('is-open');
       projectModal.setAttribute('aria-hidden', 'true');
       projectModalImg.src = '';
-      projectModalImg.alt = '';
     }
+
     closeBtn.addEventListener('click', closeProjectModal);
-    projectModal.addEventListener('click', e => { if (e.target === projectModal) closeProjectModal(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProjectModal(); });
+    projectModal.addEventListener('click', (e) => {
+      if (e.target === projectModal) closeProjectModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeProjectModal();
+    });
   </script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f3f7fb">
 
     <title>Esad Cankurtaran - Junior Software Developer | Rotterdam</title>
     <meta name="description" content="Portfolio van Esad Cankurtaran, junior software developer uit Rotterdam. Gespecialiseerd in HTML, CSS, JavaScript, PHP en MySQL. Beschikbaar voor stageopdrachten.">
@@ -33,11 +34,55 @@
     }
     </script>
 
-    <!-- ===== Fonts ===== -->
+    <!-- ===== Fonts: non-render-blocking via media=print trick ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap"></noscript>
 
+    <!-- Critical above-the-fold CSS inlined to prevent render-blocking -->
+    <style>
+      *{box-sizing:border-box;margin:0;padding:0}
+      html{scroll-behavior:smooth}
+      body{font-family:"Inter",system-ui,sans-serif;background-color:#f3f7fb;color:#14233a;line-height:1.65;overflow-x:hidden}
+      #skip-link{position:absolute;left:-9999px;top:0;background-color:#215a96;color:#fff;padding:8px 14px;border-radius:0 0 8px 0;z-index:2000}
+      #skip-link:focus{left:0}
+      .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+      .site-nav{position:sticky;top:0;z-index:100;background-color:rgba(215,230,244,.88);backdrop-filter:blur(14px);border-bottom:1px solid #dde5f0;padding:14px 0;animation:fadeDown .5s ease both}
+      .nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1080px;margin:0 auto;padding:0 24px}
+      .site-title{font-family:"Syne",sans-serif;font-weight:800;font-size:17px;letter-spacing:.5px;color:#14233a;text-decoration:none}
+      .site-title span{color:#215a96}
+      .nav-list{list-style:none;display:flex;gap:4px}
+      .nav-link{font-size:13px;font-weight:500;color:#425a78;text-decoration:none;padding:6px 12px;border-radius:8px;transition:color .2s,background-color .2s}
+      .nav-link:hover{color:#14233a;background-color:rgba(255,255,255,.7)}
+      header#welkom{background:linear-gradient(135deg,#9fc5da,#d7e6f4)}
+      .hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:80px 0 60px}
+      .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(33,90,150,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(33,90,150,.05) 1px,transparent 1px);background-size:60px 60px}
+      .hero::after{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.1) 0%,transparent 70%);top:-100px;right:-150px;pointer-events:none}
+      .hero-content{position:relative;z-index:1}
+      .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:500;color:#215a96;background-color:rgba(33,90,150,.08);border:1px solid rgba(33,90,150,.2);padding:5px 12px;border-radius:99px;margin-bottom:24px;animation:fadeUp .6s .1s ease both}
+      .hero-badge::before{content:"";width:7px;height:7px;border-radius:50%;background-color:#3b82f6;box-shadow:0 0 8px #3b82f6;animation:blink 2s ease-in-out infinite}
+      .hero h1{font-family:"Syne",sans-serif;font-size:clamp(42px,7vw,80px);font-weight:800;line-height:1.05;letter-spacing:-1px;margin-bottom:20px;animation:fadeUp .6s .2s ease both}
+      .hero h1 .naam{font-style:normal;background:linear-gradient(135deg,#215a96,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+      .hero-sub{font-size:17px;color:#425a78;max-width:520px;margin-bottom:36px;line-height:1.7;animation:fadeUp .6s .3s ease both}
+      .hero-actions{display:flex;flex-wrap:wrap;gap:12px;animation:fadeUp .6s .4s ease both}
+      .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:500;text-decoration:none;transition:transform .15s,box-shadow .15s,background-color .2s;cursor:pointer;border:none}
+      .btn:hover{transform:translateY(-2px)}
+      .btn-primary{background-color:#215a96;color:#fff;box-shadow:0 4px 20px rgba(33,90,150,.35)}
+      .btn-primary:hover{background-color:#1a4a7d;box-shadow:0 6px 28px rgba(33,90,150,.5)}
+      .btn-ghost{background-color:#fff;color:#14233a;border:1px solid #dde5f0}
+      .btn-ghost:hover{background-color:#e8f0f8}
+      @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+      @keyframes fadeDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+      @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+      .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+      .reveal.visible{opacity:1;transform:none}
+      @media(max-width:700px){.nav-list{display:none}}
+    </style>
+
+    <!-- Full stylesheet: preloaded for faster discovery -->
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -147,7 +192,8 @@
                                 alt="Esad Cankurtaran, junior software developer uit Rotterdam"
                                 width="400"
                                 height="400"
-                                loading="lazy"
+                                loading="eager"
+                                fetchpriority="high"
                             >
                         </section>
                     </section>
@@ -259,9 +305,9 @@
                         <article class="contact-row">
                             <section class="contact-info">
                                 <p class="contact-label">E-mail</p>
-                                <a class="contact-value" href="mailto:esad3074@gmail.com">esad3074@gmail.com</a>
+                                <a class="contact-value" href="/cdn-cgi/l/email-protection#fb9e889a9fc8cbcccfbb9c969a9297d5989496"><span class="__cf_email__" data-cfemail="4f2a3c2e2b7c7f787b0f28222e2623612c2022">[email&#160;protected]</span></a>
                             </section>
-                            <a class="btn btn-primary" href="mailto:esad3074@gmail.com">E-mail sturen</a>
+                            <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#dbbea8babfe8ebecef9bbcb6bab2b7f5b8b4b6">E-mail sturen</a>
                         </article>
 
                         <article class="contact-row">
@@ -277,7 +323,7 @@
                                 <p class="contact-label">Locatie</p>
                                 <p class="contact-value">Rotterdam, Nederland</p>
                             </section>
-                            <a class="btn btn-ghost" href="mailto:esad3074@gmail.com">Neem contact op</a>
+                            <a class="btn btn-ghost" href="/cdn-cgi/l/email-protection#096c7a686d3a393e3d496e64686065276a6664">Neem contact op</a>
                         </article>
                     </section>
                 </article>
@@ -309,6 +355,7 @@
         <p>&copy; 2026 Esad Cankurtaran – Junior Software Developer Rotterdam</p>
     </footer>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((e, i) => {
@@ -347,12 +394,8 @@
         projectModal.addEventListener('click', (event) => {
             if (event.target === projectModal) closeProjectModal();
         });
-
-        // Sluit modal ook met Escape toets
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && projectModal.classList.contains('is-open')) {
-                closeProjectModal();
-            }
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') closeProjectModal();
         });
     </script>
 </body>

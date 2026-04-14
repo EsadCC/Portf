@@ -3,20 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Esad Cankurtaran</title>
+
+    <title>Esad Cankurtaran - Junior Software Developer | Rotterdam</title>
+    <meta name="description" content="Portfolio van Esad Cankurtaran, junior software developer uit Rotterdam. Gespecialiseerd in HTML, CSS, JavaScript, PHP en MySQL. Beschikbaar voor stageopdrachten.">
+    <meta name="author" content="Esad Cankurtaran">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://esadcankurtaran.nl/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://esadcankurtaran.nl/">
+    <meta property="og:title" content="Esad Cankurtaran - Junior Software Developer | Rotterdam">
+    <meta property="og:description" content="Portfolio van Esad Cankurtaran, junior software developer uit Rotterdam. Beschikbaar voor stageopdrachten.">
+    <meta property="og:image" content="https://esadcankurtaran.nl/images/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Esad Cankurtaran",
+      "url": "https://esadcankurtaran.nl",
+      "jobTitle": "Junior Software Developer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rotterdam",
+        "addressCountry": "NL"
+      },
+      "email": "esad3074@gmail.com",
+      "knowsAbout": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"]
+    }
+    </script>
+
+    <!-- ===== Fonts ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <a id="skip-link" href="#main-content">Ga naar hoofdinhoud</a>
 
     <!-- NAVIGATIE -->
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Hoofdnavigatie">
         <section class="nav-inner">
-            <a href="#" class="site-title">E<span>C</span></a>
-            <ul class="nav-list">
+            <a href="#" class="site-title" aria-label="Home - Esad Cankurtaran">E<span>C</span></a>
+            <ul class="nav-list" role="list">
                 <li><a class="nav-link" href="#projecten">Projecten</a></li>
                 <li><a class="nav-link" href="#over-mij">Over mij</a></li>
                 <li><a class="nav-link" href="#skills">Skills</a></li>
@@ -26,17 +57,18 @@
     </nav>
 
     <!-- HERO -->
-    <header id="welkom">
+    <header id="welkom" aria-labelledby="hero-heading">
         <section class="wrap">
             <section class="hero">
                 <article class="hero-content">
                     <p class="hero-badge">Beschikbaar voor stageopdrachten</p>
-                    <h1>
+                    <!-- H1: één per pagina, beschrijvend voor zoekmachines -->
+                    <h1 id="hero-heading">
                         Hallo, ik ben<br>
                         <span class="naam">Esad Cankurtaran</span>
                     </h1>
                     <p class="hero-sub">
-                        Junior Software Developer met een passie voor clean code,
+                        Junior Software Developer uit Rotterdam met een passie voor clean code,
                         mooie interfaces en oplossingen die echt werken.
                     </p>
                     <section class="hero-actions">
@@ -51,10 +83,10 @@
     <main id="main-content">
 
         <!-- PROJECTEN -->
-        <section id="projecten" class="section">
+        <section id="projecten" class="section" aria-labelledby="projecten-titel">
             <section class="wrap">
                 <p class="section-label reveal">Werk</p>
-                <h2 class="section-title reveal">Uitgelichte projecten</h2>
+                <h2 id="projecten-titel" class="section-title reveal">Uitgelichte projecten</h2>
                 <p class="section-desc reveal">
                     Een selectie van projecten waar ik aan heb gewerkt. Elk project had zijn eigen uitdagingen en leermomenten.
                 </p>
@@ -62,7 +94,7 @@
                 <section class="projects-grid">
 
                     <article class="project-card reveal">
-                        <header class="card-top"></header>
+                        <header class="card-top" aria-hidden="true"></header>
                         <section class="card-body">
                             <p class="card-tag">Webapplicatie · Front-end</p>
                             <h3 class="card-title">Crypto Bank FinNova</h3>
@@ -70,22 +102,30 @@
                                 Een moderne webapplicatie voor een fictieve crypto-bank. Focus op gebruiksvriendelijke UI, responsief design en heldere datavisualisatie.
                             </p>
                             <section class="project-actions">
-                                <a class="card-link" target="_blank" href="https://finnovaaa.netlify.app/">Project bekijken</a>
+                                <a class="card-link" target="_blank" rel="noopener noreferrer" href="https://finnovaaa.netlify.app/">
+                                    Project bekijken
+                                </a>
                             </section>
                         </section>
                     </article>
 
                     <article class="project-card reveal">
-                        <header class="card-top"></header>
+                        <header class="card-top" aria-hidden="true"></header>
                         <section class="card-body">
-                            <p class="card-tag">Dashboard · JavaScript & PHP</p>
+                            <p class="card-tag">Dashboard · JavaScript &amp; PHP</p>
                             <h3 class="card-title">Client Ticket Dashboard</h3>
                             <p class="card-desc">
-                                Een overzichtsdashboard voor het beheren van klanttickets. Met real-time updates en een intuïtieve interface. 
+                                Een overzichtsdashboard voor het beheren van klanttickets. Met real-time updates en een intuïtieve interface.
                             </p>
                             <section class="project-actions">
-                                <a class="card-link" href="https://github.com/EsadCC/Client-Dashboard">Code bekijken</a>
-                                <button class="project-photo-box open-project-photo" data-src="img/Screenshot 2026-04-07 113106.png" data-alt="Screenshot van Crypto Bank FinNova">Foto bekijken</button>
+                                <a class="card-link" href="https://github.com/EsadCC/Client-Dashboard" target="_blank" rel="noopener noreferrer">
+                                    Code bekijken
+                                </a>
+                                <button class="project-photo-box open-project-photo"
+                                    data-src="img/Screenshot 2026-04-07 113106.png"
+                                    data-alt="Screenshot van het Client Ticket Dashboard met ticketoverzicht en statistieken">
+                                    Foto bekijken
+                                </button>
                             </section>
                         </section>
                     </article>
@@ -95,22 +135,28 @@
         </section>
 
         <!-- OVER MIJ -->
-        <section id="over-mij" class="section">
+        <section id="over-mij" class="section" aria-labelledby="over-mij-titel">
             <section class="wrap">
                 <section class="about-grid">
 
                     <section class="about-image-wrap reveal">
                         <section class="about-avatar">
-                                <img src="images/foto-esad.jpg" alt="Foto van Esad Cankurtaran">
-                            <p></p>
+                            <!-- Alt-tekst: beschrijvend, niet "foto van" -->
+                            <img
+                                src="images/foto-esad.jpg"
+                                alt="Esad Cankurtaran, junior software developer uit Rotterdam"
+                                width="400"
+                                height="400"
+                                loading="lazy"
+                            >
                         </section>
                     </section>
 
                     <article class="about-text reveal">
                         <p class="section-label">Over mij</p>
-                        <h2 class="section-title">Wie ben ik?</h2>
+                        <h2 id="over-mij-titel" class="section-title">Wie ben ik?</h2>
                         <p class="about-p">
-                            Ik ben een ambitieuze junior developer die graag problemen oplost met code.
+                            Ik ben een ambitieuze junior developer uit Rotterdam die graag problemen oplost met code.
                             Ik werk het liefst aan projecten waarbij design en techniek samenkomen.
                         </p>
                         <p class="about-p">
@@ -135,64 +181,65 @@
         </section>
 
         <!-- SKILLS -->
-        <section id="skills" class="section">
+        <section id="skills" class="section" aria-labelledby="skills-titel">
             <section class="wrap">
                 <p class="section-label reveal">Expertise</p>
-                <h2 class="section-title reveal">Skills</h2>
+                <h2 id="skills-titel" class="section-title reveal">Skills</h2>
 
                 <section class="skills-grid">
 
                     <article class="skill-card reveal">
-                        <section class="skill-icon-wrap">
-                            <img src="img/html-5.svg" alt="HTML5 logo">
+                        <section class="skill-icon-wrap" aria-hidden="true">
+                            <!-- Width/height + loading=lazy voor performance -->
+                            <img src="img/html-5.svg" alt="HTML5" width="28" height="28" loading="lazy">
                         </section>
-                        <p class="skill-name">HTML</p>
+                        <p class="skill-name">HTML5</p>
                         <p class="skill-desc">Semantische opbouw van webpagina's.</p>
-                        <section class="skill-bar">
+                        <section class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 vaardigheid: 90%">
                             <span class="skill-fill skill-90"></span>
                         </section>
                     </article>
 
                     <article class="skill-card reveal">
-                        <section class="skill-icon-wrap">
-                            <img src="img/css-3-svgrepo-com.svg" alt="CSS3 logo">
+                        <section class="skill-icon-wrap" aria-hidden="true">
+                            <img src="img/css-3-svgrepo-com.svg" alt="CSS3" width="28" height="28" loading="lazy">
                         </section>
-                        <p class="skill-name">CSS</p>
+                        <p class="skill-name">CSS3</p>
                         <p class="skill-desc">Moderne en responsieve layouts.</p>
-                        <section class="skill-bar">
+                        <section class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 vaardigheid: 80%">
                             <span class="skill-fill skill-80"></span>
                         </section>
                     </article>
 
                     <article class="skill-card reveal">
-                        <section class="skill-icon-wrap">
-                            <img src="img/javascript-svgrepo-com.svg" alt="JavaScript logo">
+                        <section class="skill-icon-wrap" aria-hidden="true">
+                            <img src="img/javascript-svgrepo-com.svg" alt="JavaScript" width="28" height="28" loading="lazy">
                         </section>
                         <p class="skill-name">JavaScript</p>
                         <p class="skill-desc">Interactie en dynamische onderdelen.</p>
-                        <section class="skill-bar">
+                        <section class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript vaardigheid: 75%">
                             <span class="skill-fill skill-75"></span>
                         </section>
                     </article>
 
                     <article class="skill-card reveal">
-                        <section class="skill-icon-wrap">
-                            <img src="img/php3-svgrepo-com.svg" alt="PHP logo">
+                        <section class="skill-icon-wrap" aria-hidden="true">
+                            <img src="img/php3-svgrepo-com.svg" alt="PHP" width="28" height="28" loading="lazy">
                         </section>
                         <p class="skill-name">PHP</p>
                         <p class="skill-desc">Back-end logica en simpele API's.</p>
-                        <section class="skill-bar">
+                        <section class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="PHP vaardigheid: 70%">
                             <span class="skill-fill skill-70"></span>
                         </section>
                     </article>
 
                     <article class="skill-card reveal">
-                        <section class="skill-icon-wrap">
-                            <img src="img/mysql-svgrepo-com.svg" alt="MySQL logo">
+                        <section class="skill-icon-wrap" aria-hidden="true">
+                            <img src="img/mysql-svgrepo-com.svg" alt="MySQL" width="28" height="28" loading="lazy">
                         </section>
                         <p class="skill-name">MySQL</p>
                         <p class="skill-desc">Relationale databases en queries.</p>
-                        <section class="skill-bar">
+                        <section class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="MySQL vaardigheid: 70%">
                             <span class="skill-fill skill-70"></span>
                         </section>
                     </article>
@@ -202,10 +249,10 @@
         </section>
 
         <!-- CONTACT -->
-        <section id="contact" class="section">
+        <section id="contact" class="section" aria-labelledby="contact-titel">
             <section class="wrap">
                 <article class="contact-box reveal">
-                    <h2>Contact</h2>
+                    <h2 id="contact-titel">Contact</h2>
                     <p>Je kunt me direct bereiken via onderstaande gegevens.</p>
 
                     <section class="contact-details">
@@ -220,9 +267,9 @@
                         <article class="contact-row">
                             <section class="contact-info">
                                 <p class="contact-label">Telefoon</p>
-                                <a class="contact-value" href="tel:+310623523698">+31 06 23 52 36 98</a>
+                                <a class="contact-value" href="tel:+31623523698">+31 06 23 52 36 98</a>
                             </section>
-                            <a class="btn btn-ghost" href="tel:+310623523698">Bel direct</a>
+                            <a class="btn btn-ghost" href="tel:+31623523698">Bel direct</a>
                         </article>
 
                         <article class="contact-row">
@@ -239,15 +286,27 @@
 
     </main>
 
-    <section class="project-modal" id="project-modal" aria-hidden="true">
-        <section class="project-modal-content" role="dialog" aria-modal="true" aria-label="Projectfoto">
-            <button class="close-project-modal" id="close-project-modal" aria-label="Sluiten">Sluiten</button>
-            <img id="project-modal-image" src="" alt="">
+    <!-- Modal voor projectfoto -->
+    <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Projectfoto bekijken">
+        <section class="project-modal-content">
+            <button class="close-project-modal" id="close-project-modal" aria-label="Sluit projectfoto">Sluiten</button>
+            <img id="project-modal-image" src="" alt="" loading="lazy">
         </section>
-    </section>
+    </div>
 
+    <!-- HTML Sitemap (zichtbaar voor crawlers en gebruikers) -->
     <footer>
-        <p>&copy; 2026 Esad Cankurtaran - Gebouwd met HTML & CSS</p>
+        <nav aria-label="Sitemap">
+            <ul style="list-style:none;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;font-size:13px;">
+                <li><a href="#welkom" style="color:#425a78;text-decoration:none;">Home</a></li>
+                <li><a href="#projecten" style="color:#425a78;text-decoration:none;">Projecten</a></li>
+                <li><a href="#over-mij" style="color:#425a78;text-decoration:none;">Over mij</a></li>
+                <li><a href="#skills" style="color:#425a78;text-decoration:none;">Skills</a></li>
+                <li><a href="#contact" style="color:#425a78;text-decoration:none;">Contact</a></li>
+                <li><a href="/sitemap.xml" style="color:#425a78;text-decoration:none;">Sitemap</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 Esad Cankurtaran – Junior Software Developer Rotterdam</p>
     </footer>
 
     <script>
@@ -287,6 +346,13 @@
         closeProjectModalButton.addEventListener('click', closeProjectModal);
         projectModal.addEventListener('click', (event) => {
             if (event.target === projectModal) closeProjectModal();
+        });
+
+        // Sluit modal ook met Escape toets
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && projectModal.classList.contains('is-open')) {
+                closeProjectModal();
+            }
         });
     </script>
 </body>

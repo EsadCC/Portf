@@ -1,402 +1,354 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f3f7fb">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f3f7fb">
 
-    <title>Esad Cankurtaran - Junior Software Developer | Rotterdam</title>
-    <meta name="description" content="Portfolio van Esad Cankurtaran, junior software developer uit Rotterdam. Gespecialiseerd in HTML, CSS, JavaScript, PHP en MySQL. Beschikbaar voor stageopdrachten.">
-    <meta name="author" content="Esad Cankurtaran">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://esadcankurtaran.nl/">
+  <title>Esad Cankurtaran - Junior Software Developer | Rotterdam</title>
+  <meta name="description" content="Portfolio van Esad Cankurtaran, junior software developer uit Rotterdam. Gespecialiseerd in HTML, CSS, JavaScript, PHP en MySQL. Beschikbaar voor stageopdrachten.">
+  <meta name="keywords" content="junior developer, software developer Rotterdam, HTML CSS JavaScript PHP MySQL, stagiair developer, webdeveloper Rotterdam">
+  <meta name="author" content="Esad Cankurtaran">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://esadcankurtaran.nl/">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://esadcankurtaran.nl/">
-    <meta property="og:title" content="Esad Cankurtaran - Junior Software Developer | Rotterdam">
-    <meta property="og:description" content="Portfolio van Esad Cankurtaran, junior software developer uit Rotterdam. Beschikbaar voor stageopdrachten.">
-    <meta property="og:image" content="https://esadcankurtaran.nl/images/og-image.jpg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://esadcankurtaran.nl/">
+  <meta property="og:title" content="Esad Cankurtaran - Junior Software Developer | Rotterdam">
+  <meta property="og:description" content="Portfolio van Esad Cankurtaran, junior software developer uit Rotterdam. Beschikbaar voor stageopdrachten.">
+  <meta property="og:image" content="https://esadcankurtaran.nl/images/og-image.jpg">
+  <meta property="og:locale" content="nl_NL">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Esad Cankurtaran",
-      "url": "https://esadcankurtaran.nl",
-      "jobTitle": "Junior Software Developer",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Rotterdam",
-        "addressCountry": "NL"
-      },
-      "email": "esad3074@gmail.com",
-      "knowsAbout": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"]
-    }
-    </script>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Esad Cankurtaran - Junior Software Developer">
+  <meta name="twitter:description" content="Junior developer uit Rotterdam, beschikbaar voor stageopdrachten.">
 
-    <!-- ===== Fonts: non-render-blocking via media=print trick ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap"></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap"></noscript>
 
-    <!-- Critical above-the-fold CSS inlined to prevent render-blocking -->
-    <style>
-      *{box-sizing:border-box;margin:0;padding:0}
-      html{scroll-behavior:smooth}
-      body{font-family:"Inter",system-ui,sans-serif;background-color:#f3f7fb;color:#14233a;line-height:1.65;overflow-x:hidden}
-      #skip-link{position:absolute;left:-9999px;top:0;background-color:#215a96;color:#fff;padding:8px 14px;border-radius:0 0 8px 0;z-index:2000}
-      #skip-link:focus{left:0}
-      .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-      .site-nav{position:sticky;top:0;z-index:100;background-color:rgba(215,230,244,.88);backdrop-filter:blur(14px);border-bottom:1px solid #dde5f0;padding:14px 0;animation:fadeDown .5s ease both}
-      .nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1080px;margin:0 auto;padding:0 24px}
-      .site-title{font-family:"Syne",sans-serif;font-weight:800;font-size:17px;letter-spacing:.5px;color:#14233a;text-decoration:none}
-      .site-title span{color:#215a96}
-      .nav-list{list-style:none;display:flex;gap:4px}
-      .nav-link{font-size:13px;font-weight:500;color:#425a78;text-decoration:none;padding:6px 12px;border-radius:8px;transition:color .2s,background-color .2s}
-      .nav-link:hover{color:#14233a;background-color:rgba(255,255,255,.7)}
-      header#welkom{background:linear-gradient(135deg,#9fc5da,#d7e6f4)}
-      .hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:80px 0 60px}
-      .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(33,90,150,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(33,90,150,.05) 1px,transparent 1px);background-size:60px 60px}
-      .hero::after{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.1) 0%,transparent 70%);top:-100px;right:-150px;pointer-events:none}
-      .hero-content{position:relative;z-index:1}
-      .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:500;color:#215a96;background-color:rgba(33,90,150,.08);border:1px solid rgba(33,90,150,.2);padding:5px 12px;border-radius:99px;margin-bottom:24px;animation:fadeUp .6s .1s ease both}
-      .hero-badge::before{content:"";width:7px;height:7px;border-radius:50%;background-color:#3b82f6;box-shadow:0 0 8px #3b82f6;animation:blink 2s ease-in-out infinite}
-      .hero h1{font-family:"Syne",sans-serif;font-size:clamp(42px,7vw,80px);font-weight:800;line-height:1.05;letter-spacing:-1px;margin-bottom:20px;animation:fadeUp .6s .2s ease both}
-      .hero h1 .naam{font-style:normal;background:linear-gradient(135deg,#215a96,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-      .hero-sub{font-size:17px;color:#425a78;max-width:520px;margin-bottom:36px;line-height:1.7;animation:fadeUp .6s .3s ease both}
-      .hero-actions{display:flex;flex-wrap:wrap;gap:12px;animation:fadeUp .6s .4s ease both}
-      .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:500;text-decoration:none;transition:transform .15s,box-shadow .15s,background-color .2s;cursor:pointer;border:none}
-      .btn:hover{transform:translateY(-2px)}
-      .btn-primary{background-color:#215a96;color:#fff;box-shadow:0 4px 20px rgba(33,90,150,.35)}
-      .btn-primary:hover{background-color:#1a4a7d;box-shadow:0 6px 28px rgba(33,90,150,.5)}
-      .btn-ghost{background-color:#fff;color:#14233a;border:1px solid #dde5f0}
-      .btn-ghost:hover{background-color:#e8f0f8}
-      @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-      @keyframes fadeDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
-      @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-      .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-      .reveal.visible{opacity:1;transform:none}
-      @media(max-width:700px){.nav-list{display:none}}
-    </style>
-
-    <!-- Full stylesheet: preloaded for faster discovery -->
-    <link rel="preload" href="style.css" as="style">
-    <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
-    <a id="skip-link" href="#main-content">Ga naar hoofdinhoud</a>
+  <a id="skip-link" href="#main-content">Ga naar hoofdinhoud</a>
 
-    <!-- NAVIGATIE -->
-    <nav class="site-nav" aria-label="Hoofdnavigatie">
-        <section class="nav-inner">
-            <a href="#" class="site-title" aria-label="Home - Esad Cankurtaran">E<span>C</span></a>
-            <ul class="nav-list" role="list">
-                <li><a class="nav-link" href="#projecten">Projecten</a></li>
-                <li><a class="nav-link" href="#over-mij">Over mij</a></li>
-                <li><a class="nav-link" href="#skills">Skills</a></li>
-                <li><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </section>
-    </nav>
-
-    <!-- HERO -->
-    <header id="welkom" aria-labelledby="hero-heading">
-        <section class="wrap">
-            <section class="hero">
-                <article class="hero-content">
-                    <p class="hero-badge">Beschikbaar voor stageopdrachten</p>
-                    <!-- H1: één per pagina, beschrijvend voor zoekmachines -->
-                    <h1 id="hero-heading">
-                        Hallo, ik ben<br>
-                        <span class="naam">Esad Cankurtaran</span>
-                    </h1>
-                    <p class="hero-sub">
-                        Junior Software Developer uit Rotterdam met een passie voor clean code,
-                        mooie interfaces en oplossingen die echt werken.
-                    </p>
-                    <section class="hero-actions">
-                        <a class="btn btn-primary" href="#projecten">Bekijk mijn werk</a>
-                        <a class="btn btn-ghost" href="#contact">Neem contact op</a>
-                    </section>
-                </article>
-            </section>
-        </section>
-    </header>
-
-    <main id="main-content">
-
-        <!-- PROJECTEN -->
-        <section id="projecten" class="section" aria-labelledby="projecten-titel">
-            <section class="wrap">
-                <p class="section-label reveal">Werk</p>
-                <h2 id="projecten-titel" class="section-title reveal">Uitgelichte projecten</h2>
-                <p class="section-desc reveal">
-                    Een selectie van projecten waar ik aan heb gewerkt. Elk project had zijn eigen uitdagingen en leermomenten.
-                </p>
-
-                <section class="projects-grid">
-
-                    <article class="project-card reveal">
-                        <header class="card-top" aria-hidden="true"></header>
-                        <section class="card-body">
-                            <p class="card-tag">Webapplicatie · Front-end</p>
-                            <h3 class="card-title">Crypto Bank FinNova</h3>
-                            <p class="card-desc">
-                                Een moderne webapplicatie voor een fictieve crypto-bank. Focus op gebruiksvriendelijke UI, responsief design en heldere datavisualisatie.
-                            </p>
-                            <section class="project-actions">
-                                <a class="card-link" target="_blank" rel="noopener noreferrer" href="https://finnovaaa.netlify.app/">
-                                    Project bekijken
-                                </a>
-                            </section>
-                        </section>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <header class="card-top" aria-hidden="true"></header>
-                        <section class="card-body">
-                            <p class="card-tag">Dashboard · JavaScript & PHP</p>
-                            <h3 class="card-title">Client Ticket Dashboard</h3>
-                            <p class="card-desc">
-                                Een overzichtsdashboard voor het beheren van klanttickets. Met real-time updates en een intuïtieve interface.
-                            </p>
-                            <section class="project-actions">
-                                <a class="card-link" href="https://github.com/EsadCC/Client-Dashboard" target="_blank" rel="noopener noreferrer">
-                                    Code bekijken
-                                </a>
-                                <button class="project-photo-box open-project-photo"
-                                    data-src="img/Screenshot 2026-04-07 113106.png"
-                                    data-alt="Screenshot van het Client Ticket Dashboard met ticketoverzicht en statistieken">
-                                    Foto bekijken
-                                </button>
-                            </section>
-                        </section>
-                    </article>
-
-                </section>
-            </section>
-        </section>
-
-        <!-- OVER MIJ -->
-        <section id="over-mij" class="section" aria-labelledby="over-mij-titel">
-            <section class="wrap">
-                <section class="about-grid">
-
-                    <section class="about-image-wrap reveal">
-                        <section class="about-avatar">
-                            <!-- Alt-tekst: beschrijvend, niet "foto van" -->
-                            <img
-                                src="images/foto-esad.jpg"
-                                alt="Esad Cankurtaran, junior software developer uit Rotterdam"
-                                width="400"
-                                height="400"
-                                loading="eager"
-                                fetchpriority="high"
-                            >
-                        </section>
-                    </section>
-
-                    <article class="about-text reveal">
-                        <p class="section-label">Over mij</p>
-                        <h2 id="over-mij-titel" class="section-title">Wie ben ik?</h2>
-                        <p class="about-p">
-                            Ik ben een ambitieuze junior developer uit Rotterdam die graag problemen oplost met code.
-                            Ik werk het liefst aan projecten waarbij design en techniek samenkomen.
-                        </p>
-                        <p class="about-p">
-                            Naast coderen ben ik altijd bezig mezelf te verbeteren: nieuwe technieken leren,
-                            feedback omzetten in groei en samenwerken in een team.
-                        </p>
-
-                        <section class="about-stats">
-                            <article class="stat-box">
-                                <strong class="stat-num">2+</strong>
-                                <p class="stat-label">Jaar ervaring</p>
-                            </article>
-                            <article class="stat-box">
-                                <strong class="stat-num">5+</strong>
-                                <p class="stat-label">Afgeronde projecten</p>
-                            </article>
-                        </section>
-                    </article>
-
-                </section>
-            </section>
-        </section>
-
-        <!-- SKILLS -->
-        <section id="skills" class="section" aria-labelledby="skills-titel">
-            <section class="wrap">
-                <p class="section-label reveal">Expertise</p>
-                <h2 id="skills-titel" class="section-title reveal">Skills</h2>
-
-                <section class="skills-grid">
-
-                    <article class="skill-card reveal">
-                        <section class="skill-icon-wrap" aria-hidden="true">
-                            <!-- Width/height + loading=lazy voor performance -->
-                            <img src="img/html-5.svg" alt="HTML5" width="28" height="28" loading="lazy">
-                        </section>
-                        <p class="skill-name">HTML5</p>
-                        <p class="skill-desc">Semantische opbouw van webpagina's.</p>
-                        <section class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 vaardigheid: 90%">
-                            <span class="skill-fill skill-90"></span>
-                        </section>
-                    </article>
-
-                    <article class="skill-card reveal">
-                        <section class="skill-icon-wrap" aria-hidden="true">
-                            <img src="img/css-3-svgrepo-com.svg" alt="CSS3" width="28" height="28" loading="lazy">
-                        </section>
-                        <p class="skill-name">CSS3</p>
-                        <p class="skill-desc">Moderne en responsieve layouts.</p>
-                        <section class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 vaardigheid: 80%">
-                            <span class="skill-fill skill-80"></span>
-                        </section>
-                    </article>
-
-                    <article class="skill-card reveal">
-                        <section class="skill-icon-wrap" aria-hidden="true">
-                            <img src="img/javascript-svgrepo-com.svg" alt="JavaScript" width="28" height="28" loading="lazy">
-                        </section>
-                        <p class="skill-name">JavaScript</p>
-                        <p class="skill-desc">Interactie en dynamische onderdelen.</p>
-                        <section class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript vaardigheid: 75%">
-                            <span class="skill-fill skill-75"></span>
-                        </section>
-                    </article>
-
-                    <article class="skill-card reveal">
-                        <section class="skill-icon-wrap" aria-hidden="true">
-                            <img src="img/php3-svgrepo-com.svg" alt="PHP" width="28" height="28" loading="lazy">
-                        </section>
-                        <p class="skill-name">PHP</p>
-                        <p class="skill-desc">Back-end logica en simpele API's.</p>
-                        <section class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="PHP vaardigheid: 70%">
-                            <span class="skill-fill skill-70"></span>
-                        </section>
-                    </article>
-
-                    <article class="skill-card reveal">
-                        <section class="skill-icon-wrap" aria-hidden="true">
-                            <img src="img/mysql-svgrepo-com.svg" alt="MySQL" width="28" height="28" loading="lazy">
-                        </section>
-                        <p class="skill-name">MySQL</p>
-                        <p class="skill-desc">Relationale databases en queries.</p>
-                        <section class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="MySQL vaardigheid: 70%">
-                            <span class="skill-fill skill-70"></span>
-                        </section>
-                    </article>
-
-                </section>
-            </section>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="section" aria-labelledby="contact-titel">
-            <section class="wrap">
-                <article class="contact-box reveal">
-                    <h2 id="contact-titel">Contact</h2>
-                    <p>Je kunt me direct bereiken via onderstaande gegevens.</p>
-
-                    <section class="contact-details">
-                        <article class="contact-row">
-                            <section class="contact-info">
-                                <p class="contact-label">E-mail</p>
-                                <a class="contact-value" href="/cdn-cgi/l/email-protection#fb9e889a9fc8cbcccfbb9c969a9297d5989496"><span class="__cf_email__" data-cfemail="4f2a3c2e2b7c7f787b0f28222e2623612c2022">[email&#160;protected]</span></a>
-                            </section>
-                            <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#dbbea8babfe8ebecef9bbcb6bab2b7f5b8b4b6">E-mail sturen</a>
-                        </article>
-
-                        <article class="contact-row">
-                            <section class="contact-info">
-                                <p class="contact-label">Telefoon</p>
-                                <a class="contact-value" href="tel:+31623523698">+31 06 23 52 36 98</a>
-                            </section>
-                            <a class="btn btn-ghost" href="tel:+31623523698">Bel direct</a>
-                        </article>
-
-                        <article class="contact-row">
-                            <section class="contact-info">
-                                <p class="contact-label">Locatie</p>
-                                <p class="contact-value">Rotterdam, Nederland</p>
-                            </section>
-                            <a class="btn btn-ghost" href="/cdn-cgi/l/email-protection#096c7a686d3a393e3d496e64686065276a6664">Neem contact op</a>
-                        </article>
-                    </section>
-                </article>
-            </section>
-        </section>
-
-    </main>
-
-    <!-- Modal voor projectfoto -->
-    <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Projectfoto bekijken">
-        <section class="project-modal-content">
-            <button class="close-project-modal" id="close-project-modal" aria-label="Sluit projectfoto">Sluiten</button>
-            <img id="project-modal-image" src="" alt="" loading="lazy">
-        </section>
+  <!-- NAVIGATIE -->
+  <nav class="site-nav" aria-label="Hoofdnavigatie">
+    <div class="nav-inner">
+      <a href="#" class="site-title" aria-label="Home - Esad Cankurtaran">E<span>C</span></a>
+      <ul class="nav-list" role="list">
+        <li><a class="nav-link" href="#projecten">Projecten</a></li>
+        <li><a class="nav-link" href="#over-mij">Over mij</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- HTML Sitemap (zichtbaar voor crawlers en gebruikers) -->
-    <footer>
-        <nav aria-label="Sitemap">
-            <ul style="list-style:none;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;font-size:13px;">
-                <li><a href="#welkom" style="color:#425a78;text-decoration:none;">Home</a></li>
-                <li><a href="#projecten" style="color:#425a78;text-decoration:none;">Projecten</a></li>
-                <li><a href="#over-mij" style="color:#425a78;text-decoration:none;">Over mij</a></li>
-                <li><a href="#skills" style="color:#425a78;text-decoration:none;">Skills</a></li>
-                <li><a href="#contact" style="color:#425a78;text-decoration:none;">Contact</a></li>
-                <li><a href="/sitemap.xml" style="color:#425a78;text-decoration:none;">Sitemap</a></li>
-            </ul>
-        </nav>
-        <p>&copy; 2026 Esad Cankurtaran – Junior Software Developer Rotterdam</p>
-    </footer>
+  <!-- HERO / LCP-ELEMENT -->
+  <header id="welkom" aria-labelledby="hero-heading">
+    <div class="wrap">
+      <div class="hero">
+        <div class="hero-content">
+          <p class="hero-badge">Beschikbaar voor stageopdrachten</p>
+          <h1 id="hero-heading">
+            Hallo, ik ben<br>
+            <span class="naam">Esad Cankurtaran</span>
+          </h1>
+          <p class="hero-sub">
+            Junior Software Developer uit Rotterdam met een passie voor clean code,
+            mooie interfaces en oplossingen die echt werken.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projecten">Bekijk mijn werk</a>
+            <a class="btn btn-ghost" href="#contact">Neem contact op</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((e, i) => {
-                if (e.isIntersecting) {
-                    e.target.style.transitionDelay = (i * 0.08) + 's';
-                    e.target.classList.add('visible');
-                    observer.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.12 });
+  <main id="main-content">
 
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    <!-- PROJECTEN -->
+    <section id="projecten" class="section" aria-labelledby="projecten-titel">
+      <div class="wrap">
+        <p class="section-label reveal">Werk</p>
+        <h2 id="projecten-titel" class="section-title reveal">Uitgelichte projecten</h2>
+        <p class="section-desc reveal">
+          Een selectie van projecten waar ik aan heb gewerkt. Elk project had zijn eigen uitdagingen en leermomenten.
+        </p>
 
-        const projectModal = document.getElementById('project-modal');
-        const projectModalImage = document.getElementById('project-modal-image');
-        const closeProjectModalButton = document.getElementById('close-project-modal');
-        const projectPhotoButtons = document.querySelectorAll('.open-project-photo');
+        <div class="projects-grid">
 
-        projectPhotoButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                projectModalImage.src = button.dataset.src;
-                projectModalImage.alt = button.dataset.alt;
-                projectModal.classList.add('is-open');
-                projectModal.setAttribute('aria-hidden', 'false');
-            });
-        });
+          <article class="project-card reveal">
+            <div class="card-top" aria-hidden="true"></div>
+            <div class="card-body">
+              <p class="card-tag">Webapplicatie · Front-end</p>
+              <h3 class="card-title">Crypto Bank FinNova</h3>
+              <p class="card-desc">
+                Een moderne webapplicatie voor een fictieve crypto-bank. Focus op gebruiksvriendelijke UI, responsief design en heldere datavisualisatie.
+              </p>
+              <div class="project-actions">
+                <a class="card-link" target="_blank" rel="noopener noreferrer" href="https://finnovaaa.netlify.app/">
+                  Project bekijken
+                </a>
+              </div>
+            </div>
+          </article>
 
-        function closeProjectModal() {
-            projectModal.classList.remove('is-open');
-            projectModal.setAttribute('aria-hidden', 'true');
-            projectModalImage.src = '';
-            projectModalImage.alt = '';
+          <article class="project-card reveal">
+            <div class="card-top" aria-hidden="true"></div>
+            <div class="card-body">
+              <p class="card-tag">Dashboard · JavaScript & PHP</p>
+              <h3 class="card-title">Client Ticket Dashboard</h3>
+              <p class="card-desc">
+                Een overzichtsdashboard voor het beheren van klanttickets. Met real-time updates en een intuïtieve interface.
+              </p>
+              <div class="project-actions">
+                <a class="card-link" href="https://github.com/EsadCC/Client-Dashboard" target="_blank" rel="noopener noreferrer">
+                  Code bekijken
+                </a>
+                <button class="project-photo-box open-project-photo"
+                  data-src="img/dashboard-screenshot.webp"
+                  data-alt="Screenshot van het Client Ticket Dashboard met ticketoverzicht en statistieken"
+                  aria-label="Bekijk screenshot van Client Ticket Dashboard">
+                  Foto bekijken
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OVER MIJ -->
+    <section id="over-mij" class="section" aria-labelledby="over-mij-titel">
+      <div class="wrap">
+        <div class="about-grid">
+
+          <div class="about-image-wrap reveal">
+            <div class="about-avatar">
+              <!--
+                FIX #6: LCP-element – fetchpriority="high" + expliciete width/height
+                Zorg dat images/foto-esad.jpg bestaat op je server.
+                Converteer naar WebP voor snellere laadtijd (~30-50% kleiner).
+              -->
+              <img
+                src="images/foto-esad.jpg"
+                alt="Esad Cankurtaran, junior software developer uit Rotterdam"
+                width="400"
+                height="400"
+                loading="eager"
+                fetchpriority="high"
+                decoding="sync"
+              >
+            </div>
+          </div>
+
+          <article class="about-text reveal">
+            <p class="section-label">Over mij</p>
+            <h2 id="over-mij-titel" class="section-title">Wie ben ik?</h2>
+            <p class="about-p">
+              Ik ben een ambitieuze junior developer uit Rotterdam die graag problemen oplost met code.
+              Ik werk het liefst aan projecten waarbij design en techniek samenkomen.
+            </p>
+            <p class="about-p">
+              Naast coderen ben ik altijd bezig mezelf te verbeteren: nieuwe technieken leren,
+              feedback omzetten in groei en samenwerken in een team.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat-box">
+                <strong class="stat-num">2+</strong>
+                <p class="stat-label">Jaar ervaring</p>
+              </div>
+              <div class="stat-box">
+                <strong class="stat-num">5+</strong>
+                <p class="stat-label">Afgeronde projecten</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section" aria-labelledby="skills-titel">
+      <div class="wrap">
+        <p class="section-label reveal">Expertise</p>
+        <h2 id="skills-titel" class="section-title reveal">Skills</h2>
+
+        <div class="skills-grid">
+
+          <article class="skill-card reveal">
+            <!-- FIX #7: skill-bar als <div> i.p.v. <section> — role=progressbar mag niet op <section> -->
+            <div class="skill-icon-wrap" aria-hidden="true">
+              <img src="img/html-5.svg" alt="HTML5 logo" width="28" height="28" loading="lazy">
+            </div>
+            <p class="skill-name">HTML5</p>
+            <p class="skill-desc">Semantische opbouw van webpagina's.</p>
+            <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 vaardigheid: 90%">
+              <span class="skill-fill skill-90"></span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon-wrap" aria-hidden="true">
+              <img src="img/css-3-svgrepo-com.svg" alt="CSS3 logo" width="28" height="28" loading="lazy">
+            </div>
+            <p class="skill-name">CSS3</p>
+            <p class="skill-desc">Moderne en responsieve layouts.</p>
+            <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 vaardigheid: 80%">
+              <span class="skill-fill skill-80"></span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon-wrap" aria-hidden="true">
+              <img src="img/javascript-svgrepo-com.svg" alt="JavaScript logo" width="28" height="28" loading="lazy">
+            </div>
+            <p class="skill-name">JavaScript</p>
+            <p class="skill-desc">Interactie en dynamische onderdelen.</p>
+            <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript vaardigheid: 75%">
+              <span class="skill-fill skill-75"></span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon-wrap" aria-hidden="true">
+              <img src="img/php3-svgrepo-com.svg" alt="PHP logo" width="28" height="28" loading="lazy">
+            </div>
+            <p class="skill-name">PHP</p>
+            <p class="skill-desc">Back-end logica en simpele API's.</p>
+            <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="PHP vaardigheid: 70%">
+              <span class="skill-fill skill-70"></span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon-wrap" aria-hidden="true">
+              <img src="img/mysql-svgrepo-com.svg" alt="MySQL logo" width="28" height="28" loading="lazy">
+            </div>
+            <p class="skill-name">MySQL</p>
+            <p class="skill-desc">Relationale databases en queries.</p>
+            <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="MySQL vaardigheid: 70%">
+              <span class="skill-fill skill-70"></span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-titel">
+      <div class="wrap">
+        <article class="contact-box reveal">
+          <h2 id="contact-titel">Contact</h2>
+          <p>Je kunt me direct bereiken via onderstaande gegevens.</p>
+
+          <div class="contact-details">
+            <div class="contact-row">
+              <div class="contact-info">
+                <p class="contact-label">E-mail</p>
+                <!-- FIX #8: Cloudflare email-obfuscation verwijderd – voorkomt 404 op email-decode.js -->
+                <a class="contact-value" href="mailto:esad3074@gmail.com">esad3074@gmail.com</a>
+              </div>
+              <a class="btn btn-primary" href="mailto:esad3074@gmail.com">E-mail sturen</a>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-info">
+                <p class="contact-label">Telefoon</p>
+                <a class="contact-value" href="tel:+31623523698">+31 06 23 52 36 98</a>
+              </div>
+              <a class="btn btn-ghost" href="tel:+31623523698">Bel direct</a>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-info">
+                <p class="contact-label">Locatie</p>
+                <p class="contact-value">Rotterdam, Nederland</p>
+              </div>
+              <!-- FIX #9: Identieke link-tekst opgelost – was "Neem contact op" → mailto -->
+              <a class="btn btn-ghost" href="mailto:esad3074@gmail.com" aria-label="Stuur een e-mail naar Esad">Stuur e-mail</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal voor projectfoto -->
+  <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Projectfoto bekijken">
+    <div class="project-modal-content">
+      <button class="close-project-modal" id="close-project-modal" aria-label="Sluit projectfoto">Sluiten</button>
+      <img id="project-modal-image" src="" alt="" width="900" height="600" loading="lazy">
+    </div>
+  </div>
+
+  <!-- HTML Sitemap in footer -->
+  <footer>
+    <nav aria-label="Sitemap">
+      <ul style="list-style:none;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;font-size:13px;">
+        <li><a href="#welkom" style="color:#425a78;text-decoration:none;">Home</a></li>
+        <li><a href="#projecten" style="color:#425a78;text-decoration:none;">Projecten</a></li>
+        <li><a href="#over-mij" style="color:#425a78;text-decoration:none;">Over mij</a></li>
+        <li><a href="#skills" style="color:#425a78;text-decoration:none;">Skills</a></li>
+        <li><a href="#contact" style="color:#425a78;text-decoration:none;">Contact</a></li>
+        <li><a href="/sitemap.xml" style="color:#425a78;text-decoration:none;">Sitemap</a></li>
+        <li><a href="/sitemap.html" style="color:#425a78;text-decoration:none;">HTML Sitemap</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Esad Cankurtaran – Junior Software Developer Rotterdam</p>
+  </footer>
+
+  <!-- FIX #10: Cloudflare email-decode script verwijderd (veroorzaakte 404-console-fout) -->
+  <script>
+    // Scroll-reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          e.target.style.transitionDelay = (i * 0.08) + 's';
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
         }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        closeProjectModalButton.addEventListener('click', closeProjectModal);
-        projectModal.addEventListener('click', (event) => {
-            if (event.target === projectModal) closeProjectModal();
-        });
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') closeProjectModal();
-        });
-    </script>
+    // Project modal
+    const projectModal    = document.getElementById('project-modal');
+    const projectModalImg = document.getElementById('project-modal-image');
+    const closeBtn        = document.getElementById('close-project-modal');
+
+    document.querySelectorAll('.open-project-photo').forEach(btn => {
+      btn.addEventListener('click', () => {
+        projectModalImg.src = btn.dataset.src;
+        projectModalImg.alt = btn.dataset.alt;
+        projectModal.classList.add('is-open');
+        projectModal.setAttribute('aria-hidden', 'false');
+        closeBtn.focus();
+      });
+    });
+
+    function closeProjectModal() {
+      projectModal.classList.remove('is-open');
+      projectModal.setAttribute('aria-hidden', 'true');
+      projectModalImg.src = '';
+      projectModalImg.alt = '';
+    }
+    closeBtn.addEventListener('click', closeProjectModal);
+    projectModal.addEventListener('click', e => { if (e.target === projectModal) closeProjectModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProjectModal(); });
+  </script>
 </body>
 </html>

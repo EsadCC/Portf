@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-# Blokkeer irrelevante mappen
-Disallow: /img/
-Disallow: /images/
-
-# Sitemap
-Sitemap: https://esadcankurtaran.nl/sitemap.xml

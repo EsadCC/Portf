@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Sitemap – Esad Cankurtaran Portfolio</title>
+  <meta name="description" content="Overzicht van alle pagina's en secties van het portfolio van Esad Cankurtaran, junior software developer uit Rotterdam.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #f3f7fb;
+      color: #14233a;
+      line-height: 1.65;
+    }
+
+    /* NAV */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(215,230,244,.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid #dde5f0;
+      padding: 14px 0;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .site-title {
+      font-family: "Syne", sans-serif;
+      font-weight: 800;
+      font-size: 17px;
+      color: #14233a;
+      text-decoration: none;
+    }
+    .site-title span { color: #215a96; }
+    .nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: #425a78;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: color .2s, background .2s;
+    }
+    .nav-link:hover { color: #14233a; background: rgba(255,255,255,.7); }
+
+    /* LAYOUT */
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* HERO */
+    .page-hero {
+      background: linear-gradient(135deg, #9fc5da, #d7e6f4);
+      padding: 80px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(33,90,150,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(33,90,150,.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .page-hero .wrap { position: relative; z-index: 1; }
+    .page-hero .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #3b82f6;
+      margin-bottom: 12px;
+    }
+    .page-hero h1 {
+      font-family: "Syne", sans-serif;
+      font-size: clamp(32px,5vw,52px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .page-hero p { color: #425a78; font-size: 16px; max-width: 480px; }
+
+    /* CONTENT */
+    .content { padding: 72px 0 96px; }
+
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .sitemap-card {
+      background: #fff;
+      border: 1px solid #dde5f0;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+    }
+    .sitemap-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(33,90,150,.1);
+      border-color: rgba(59,130,246,.3);
+    }
+
+    .card-stripe {
+      height: 5px;
+      background: linear-gradient(90deg, #9fc5da, #3b82f6);
+    }
+
+    .card-body { padding: 24px; }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: #e8f0f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .card-title {
+      font-family: "Syne", sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #14233a;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: #425a78;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .card-links { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+
+    .card-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: #215a96;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap .15s;
+    }
+    .card-links a::before { content: "→"; color: #3b82f6; font-size: 12px; }
+    .card-links a:hover { gap: 10px; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #dde5f0;
+      padding: 28px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #425a78;
+      background: #eaf2f9;
+    }
+
+    @media (max-width: 700px) {
+      .nav-list { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" aria-label="Hoofdnavigatie">
+    <div class="nav-inner">
+      <a href="index.html" class="site-title" aria-label="Home – Esad Cankurtaran">E<span>C</span></a>
+      <nav aria-label="Paginanavigatie">
+        <ul class="nav-list" role="list" style="list-style:none;display:flex;gap:4px;">
+          <li><a class="nav-link" href="index.html#projecten">Projecten</a></li>
+          <li><a class="nav-link" href="index.html#over-mij">Over mij</a></li>
+          <li><a class="nav-link" href="index.html#skills">Skills</a></li>
+          <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="page-hero" aria-labelledby="sitemap-heading">
+    <div class="wrap">
+      <p class="label">Navigatie</p>
+      <h1 id="sitemap-heading">Sitemap</h1>
+      <p>Een overzicht van alle pagina's en secties van deze website.</p>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main id="main-content">
+    <section class="content">
+      <div class="wrap">
+        <div class="sitemap-grid">
+
+          <!-- Homepage -->
+          <article class="sitemap-card">
+            <div class="card-stripe" aria-hidden="true"></div>
+            <div class="card-body">
+              <div class="card-icon" aria-hidden="true">🏠</div>
+              <h2 class="card-title">Homepage</h2>
+              <p class="card-desc">De hoofdpagina van het portfolio met een introductie en navigatie naar alle secties.</p>
+              <ul class="card-links">
+                <li><a href="index.html">Ga naar homepage</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Projecten -->
+          <article class="sitemap-card">
+            <div class="card-stripe" aria-hidden="true"></div>
+            <div class="card-body">
+              <div class="card-icon" aria-hidden="true">💼</div>
+              <h2 class="card-title">Projecten</h2>
+              <p class="card-desc">Overzicht van uitgelichte projecten, waaronder Crypto Bank FinNova en het Client Ticket Dashboard.</p>
+              <ul class="card-links">
+                <li><a href="index.html#projecten">Bekijk projecten</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Over mij -->
+          <article class="sitemap-card">
+            <div class="card-stripe" aria-hidden="true"></div>
+            <div class="card-body">
+              <div class="card-icon" aria-hidden="true">👤</div>
+              <h2 class="card-title">Over mij</h2>
+              <p class="card-desc">Informatie over Esad Cankurtaran: achtergrond, ervaring en drijfveren als junior developer.</p>
+              <ul class="card-links">
+                <li><a href="index.html#over-mij">Meer over mij</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Skills -->
+          <article class="sitemap-card">
+            <div class="card-stripe" aria-hidden="true"></div>
+            <div class="card-body">
+              <div class="card-icon" aria-hidden="true">⚡</div>
+              <h2 class="card-title">Skills</h2>
+              <p class="card-desc">Technische vaardigheden inclusief HTML5, CSS3, JavaScript, PHP, MySQL en C++.</p>
+              <ul class="card-links">
+                <li><a href="index.html#skills">Bekijk skills</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Contact -->
+          <article class="sitemap-card">
+            <div class="card-stripe" aria-hidden="true"></div>
+            <div class="card-body">
+              <div class="card-icon" aria-hidden="true">✉️</div>
+              <h2 class="card-title">Contact</h2>
+              <p class="card-desc">Contactgegevens voor het bereiken van Esad Cankurtaran via e-mail of telefoon.</p>
+              <ul class="card-links">
+                <li><a href="index.html#contact">Neem contact op</a></li>
+                <li><a href="mailto:esad3074@gmail.com">E-mail sturen</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Bestanden -->
+          <article class="sitemap-card">
+            <div class="card-stripe" aria-hidden="true"></div>
+            <div class="card-body">
+              <div class="card-icon" aria-hidden="true">📄</div>
+              <h2 class="card-title">Technische bestanden</h2>
+              <p class="card-desc">Technische bestanden voor zoekmachines en beheer van de website.</p>
+              <ul class="card-links">
+                <li><a href="sitemap.xml">XML Sitemap</a></li>
+                <li><a href="robots.txt">robots.txt</a></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Esad Cankurtaran – Junior Software Developer Rotterdam</p>
+  </footer>
+
+</body>
+</html>

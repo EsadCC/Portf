@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagina niet gevonden – Esad Cankurtaran</title>
+  <meta name="description" content="Deze pagina bestaat niet. Ga terug naar het portfolio van Esad Cankurtaran.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #f3f7fb;
+      color: #14233a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    /* Animated background grid */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(33,90,150,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(33,90,150,.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Glowing orb */
+    body::after {
+      content: "";
+      position: fixed;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59,130,246,.12) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: #ffffff;
+      border: 1px solid #dde5f0;
+      border-radius: 24px;
+      padding: 64px 56px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 40px rgba(33,90,150,.1);
+      animation: popIn .5s cubic-bezier(.34,1.56,.64,1) both;
+    }
+
+    .error-code {
+      font-family: "Syne", sans-serif;
+      font-size: clamp(80px, 20vw, 120px);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, #215a96, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+      letter-spacing: -4px;
+    }
+
+    .divider {
+      width: 48px;
+      height: 4px;
+      background: linear-gradient(90deg, #215a96, #3b82f6);
+      border-radius: 99px;
+      margin: 0 auto 24px;
+    }
+
+    h1 {
+      font-family: "Syne", sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #14233a;
+    }
+
+    p {
+      color: #425a78;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: transform .15s, box-shadow .15s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: #215a96;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(33,90,150,.3);
+    }
+    .btn-primary:hover { background: #1a4a7d; box-shadow: 0 6px 28px rgba(33,90,150,.5); }
+
+    .btn-ghost {
+      background: #fff;
+      color: #14233a;
+      border: 1px solid #dde5f0;
+    }
+    .btn-ghost:hover { background: #e8f0f8; }
+
+    .nav-back {
+      position: fixed;
+      top: 20px;
+      left: 24px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "Syne", sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: #14233a;
+      text-decoration: none;
+    }
+    .nav-back span { color: #215a96; }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(.9) translateY(20px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="nav-back" aria-label="Terug naar home">E<span>C</span></a>
+
+  <main class="card" role="main">
+    <div class="error-code" aria-label="Foutcode 404">404</div>
+    <div class="divider" aria-hidden="true"></div>
+    <h1>Pagina niet gevonden</h1>
+    <p>
+      De pagina die je zoekt bestaat niet of is verplaatst.<br>
+      Ga terug naar de homepage of bekijk het portfolio.
+    </p>
+    <div class="btn-group">
+      <a class="btn btn-primary" href="index.html">← Terug naar home</a>
+      <a class="btn btn-ghost" href="index.html#projecten">Bekijk projecten</a>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+# robots.txt – Esad Cankurtaran Portfolio
+# https://esadcc.github.io/Portf/
+
+# Alle zoekmachines mogen de hele website indexeren
+User-agent: *
+Allow: /
+
+# Verwijzing naar de XML sitemap
+Sitemap: https://esadcc.github.io/Portf/sitemap.xml

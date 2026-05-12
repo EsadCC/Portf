@@ -737,7 +737,7 @@ footer {
 }
 /* scroll reveal */
 .reveal {
-  opacity: 0;
+  opacity: 0.01;
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }

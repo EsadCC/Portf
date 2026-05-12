@@ -20,6 +20,7 @@
   <!-- Google Fonts – preconnect first, then stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTcviYwYZ8UA3.woff2" as="font" type="font/woff2" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 
   <!-- Sitemap link -->
@@ -158,7 +159,8 @@
                 alt="Esad Cankurtaran, junior software developer uit Rotterdam"
                 width="600"
                 height="600"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 decoding="async">
             </div>
           </div>
@@ -311,7 +313,7 @@
   <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Projectfoto bekijken">
     <div class="project-modal-content">
       <button class="close-project-modal" id="close-project-modal" aria-label="Sluit projectfoto">Sluiten</button>
-      <img id="project-modal-image" src="" alt="" width="900" height="600" loading="lazy">
+      <img id="project-modal-image" src="" alt="" width="900" height="600">
     </div>
   </div>
 

@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage / portfolio hoofdpagina -->
   <url>
     <loc>https://esadcc.github.io/Portf/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- HTML Sitemap -->
   <url>
     <loc>https://esadcc.github.io/Portf/sitemap.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

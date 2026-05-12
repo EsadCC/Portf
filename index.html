@@ -6,6 +6,25 @@
   <meta name="description" content="Portfolio van Esad Cankurtaran, junior software developer uit Rotterdam. Gespecialiseerd in HTML, CSS, JavaScript, PHP en MySQL.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://esadcc.github.io/Portf/">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://esadcc.github.io/Portf/">
+  <meta property="og:title" content="Esad Cankurtaran - Junior Software Developer | Rotterdam">
+  <meta property="og:description" content="Portfolio van Esad Cankurtaran, junior software developer uit Rotterdam. Gespecialiseerd in HTML, CSS, JavaScript, PHP en MySQL.">
+  <meta property="og:image" content="https://esadcc.github.io/Portf/img/IMG_0254.jpg">
+
+  <!-- Google Fonts – preconnect first, then stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Sitemap link -->
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -69,11 +88,12 @@
                 Een moderne webapplicatie voor een fictieve crypto-bank. Focus op gebruiksvriendelijke UI, responsief design en heldere datavisualisatie.
               </p>
               <div class="project-actions">
-                <a class="card-link" target="_blank"  href="https://github.com/EsadCC/bank-app">
-                  code bekijken
+                <a class="card-link" target="_blank" rel="noopener" href="https://github.com/EsadCC/bank-app">
+                  Code bekijken
                 </a>
                 <button class="project-photo-box open-project-photo"
-                  data-src="img/Screenshot 2026-04-14 114602.png">
+                  data-src="img/Screenshot_2026-04-14_114602.jpg"
+                  data-alt="Screenshot van Crypto Bank FinNova webapplicatie">
                   Foto bekijken
                 </button>
               </div>
@@ -83,17 +103,18 @@
           <article class="project-card reveal">
             <div class="card-top" aria-hidden="true"></div>
             <div class="card-body">
-              <p class="card-tag">Dashboard · JavaScript & PHP</p>
+              <p class="card-tag">Dashboard · JavaScript &amp; PHP</p>
               <h3 class="card-title">Client Ticket Dashboard</h3>
               <p class="card-desc">
                 Een overzichtsdashboard voor het beheren van klanttickets. Met real-time updates en een intuïtieve interface.
               </p>
               <div class="project-actions">
-                <a class="card-link" href="https://github.com/EsadCC/Client-Dashboard" target="_blank">
+                <a class="card-link" href="https://github.com/EsadCC/Client-Dashboard" target="_blank" rel="noopener">
                   Code bekijken
                 </a>
                 <button class="project-photo-box open-project-photo"
-                  data-src="img/Screenshot 2026-04-07 113106.png">
+                  data-src="img/Screenshot_2026-04-07_113106.jpg"
+                  data-alt="Screenshot van Client Ticket Dashboard">
                   Foto bekijken
                 </button>
               </div>
@@ -103,17 +124,18 @@
           <article class="project-card reveal">
             <div class="card-top" aria-hidden="true"></div>
             <div class="card-body">
-              <p class="card-tag">Techfix Solutions ·  SQL, JavaScript & PHP</p>
+              <p class="card-tag">Techfix Solutions · SQL, JavaScript &amp; PHP</p>
               <h3 class="card-title">Webshop</h3>
               <p class="card-desc">
                 Een eenvoudige webshop voor een fictief bedrijf dat technische reparaties aanbiedt. Inclusief productcatalogus, winkelmand en bestelformulier.
               </p>
               <div class="project-actions">
-                <a class="card-link" href="https://github.com/EsadCC/techfix-solutions" target="_blank">
+                <a class="card-link" href="https://github.com/EsadCC/techfix-solutions" target="_blank" rel="noopener">
                   Code bekijken
                 </a>
                 <button class="project-photo-box open-project-photo"
-                  data-src="img/techfixsolutions.png">
+                  data-src="img/techfixsolutions.jpg"
+                  data-alt="Screenshot van Techfix Solutions webshop">
                   Foto bekijken
                 </button>
               </div>
@@ -132,7 +154,12 @@
           <div class="about-image-wrap reveal">
             <div class="about-avatar">
               <img
-                src="img/IMG_0254.jpg" alt="Esad Cankurtaran, junior software developer uit Rotterdam">
+                src="img/IMG_0254.jpg"
+                alt="Esad Cankurtaran, junior software developer uit Rotterdam"
+                width="600"
+                height="600"
+                loading="lazy"
+                decoding="async">
             </div>
           </div>
 
@@ -233,7 +260,7 @@
             </div>
             <p class="skill-name">C++</p>
             <p class="skill-desc">Programmeer taal met focus op prestaties en geheugenbeheer.</p>
-            <div class="skill-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" aria-label="C++ vaardigheid: 0%">
+            <div class="skill-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="C++ vaardigheid: 0%">
               <span class="skill-0"></span>
             </div>
           </article>
@@ -296,6 +323,7 @@
         <li><a href="#over-mij" style="color:#425a78;text-decoration:none;">Over mij</a></li>
         <li><a href="#skills" style="color:#425a78;text-decoration:none;">Skills</a></li>
         <li><a href="#contact" style="color:#425a78;text-decoration:none;">Contact</a></li>
+        <li><a href="sitemap.html" style="color:#425a78;text-decoration:none;">Sitemap</a></li>
       </ul>
     </nav>
     <p>&copy; 2026 Esad Cankurtaran – Junior Software Developer Rotterdam</p>
@@ -322,7 +350,7 @@
     document.querySelectorAll('.open-project-photo').forEach(btn => {
       btn.addEventListener('click', () => {
         projectModalImg.src = btn.dataset.src;
-        projectModalImg.alt = btn.dataset.alt;
+        projectModalImg.alt = btn.dataset.alt || 'Projectfoto';
         projectModal.classList.add('is-open');
         projectModal.setAttribute('aria-hidden', 'false');
         closeBtn.focus();
